@@ -29,8 +29,8 @@ export default {
 /* generics */
 
 body {
-  background-image: url();
-  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 li {
