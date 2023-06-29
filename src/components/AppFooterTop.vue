@@ -8,7 +8,7 @@ export default {
 
 <template>
     <!-- top -->
-    <div class="footer-top">
+    <footer class="footer-top">
         <div class="container">
             <div class="box-left">
                 <h3>DC COMICS</h3>
@@ -54,7 +54,7 @@ export default {
                 </ul>
             </div>
         </div>
-    </div>
+    </footer>
 </template>
 
 <style lang="scss" scoped>
