@@ -1,11 +1,11 @@
 <script>
 export default {
     data() {
-        return
+        return {}
     }
 }
 </script>
 
 <template></template>
 
-<style></style>
+<style lang="scss" scoped></style>

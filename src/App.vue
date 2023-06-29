@@ -1,9 +1,10 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
-import AppFooter from './components/AppFooter.vue'
+import AppFooterTop from './components/AppFooterTop.vue'
+import AppFooterBottom from './components/AppFooterBottom.vue'
 export default {
-  components: { AppHeader, AppMain, AppFooter },
+  components: { AppHeader, AppMain, AppFooterTop, AppFooterBottom },
   data() {
     return
   }
@@ -14,7 +15,8 @@ export default {
   <div>
     <AppHeader />
     <AppMain />
-    <AppFooter />
+    <AppFooterTop />
+    <AppFooterBottom />
   </div>
 </template>
 
