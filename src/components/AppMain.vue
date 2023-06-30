@@ -19,11 +19,15 @@ export default {
             <div class="card-container container">
                 <ComicCard v-for="comic in comics" :key="comic.series" :comic="comic" />
             </div>
+            <div class="container center">
+                <h3 class="load">LOAD MORE</h3>
+            </div>
+
         </section>
 
         <!-- bottom -->
         <section class="section-bottom">
-            <ul class="container">
+            <ul class="container center">
                 <li>
                     <img class="small" src="../assets/img/buy-comics-digital-comics.png" alt="">
                     <a href="#">DIGITAL COMICS</a>
@@ -90,6 +94,20 @@ figure {
 
 .card {
     flex-basis: calc(100% / 6);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.load {
+    color: white;
+    padding: 10px 50px;
+    border: 2px solid rgb(2, 130, 249);
+    background-color: rgb(2, 130, 249);
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .section-bottom {
