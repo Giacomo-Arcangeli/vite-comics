@@ -1,17 +1,24 @@
 <script>
 export default {
-    data() {
-        return {}
+    props: {
+        comics: Array
     }
-}
+};
 </script>
 
 <template>
     <main>
+        <figure></figure>
         <!-- top -->
         <section class="section-top">
             <div class="container">
-                <h2>Content goes here</h2>
+                <h2 class="series">CURRENT SERIES</h2>
+            </div>
+            <div class="card-container container">
+                <div v-for="comic in comics" :key="comic.series" class="card">
+                    <img class="comic-fig" :src="comic.thumb" :alt="comic.series">
+                    <h4>{{ comic.series }}</h4>
+                </div>
             </div>
         </section>
 
@@ -44,16 +51,59 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+figure {
+    background-image: url(../assets/img/jumbotron.jpg);
+    height: 400px;
+}
+
+.container {
+    position: relative;
+}
+
+.series {
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid rgb(2, 130, 249);
+    background-color: rgb(2, 130, 249);
+    position: relative;
+    bottom: 28px;
+    font-weight: 600;
+}
+
 .section-top {
     color: white;
     background-color: rgb(28, 28, 28);
-    height: 140px;
+    min-height: 140px;
 
     div {
         display: flex;
         align-items: center;
         height: 100%;
     }
+}
+
+// card
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.card {
+    flex-basis: calc(100% / 6);
+    display: flex;
+    flex-direction: column;
+}
+
+.comic-fig {
+    width: 200px;
+    height: 230px;
+}
+
+h4 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
 .section-bottom {
