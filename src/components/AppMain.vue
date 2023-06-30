@@ -1,5 +1,7 @@
 <script>
+import ComicCard from './ComicCard.vue';
 export default {
+    components: { ComicCard },
     props: {
         comics: Array
     }
@@ -15,10 +17,7 @@ export default {
                 <h2 class="series">CURRENT SERIES</h2>
             </div>
             <div class="card-container container">
-                <div v-for="comic in comics" :key="comic.series" class="card">
-                    <img class="comic-fig" :src="comic.thumb" :alt="comic.series">
-                    <h4>{{ comic.series }}</h4>
-                </div>
+                <ComicCard v-for="comic in comics" :key="comic.series" :comic="comic" />
             </div>
         </section>
 
@@ -91,19 +90,6 @@ figure {
 
 .card {
     flex-basis: calc(100% / 6);
-    display: flex;
-    flex-direction: column;
-}
-
-.comic-fig {
-    width: 200px;
-    height: 230px;
-}
-
-h4 {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 40px;
 }
 
 .section-bottom {
